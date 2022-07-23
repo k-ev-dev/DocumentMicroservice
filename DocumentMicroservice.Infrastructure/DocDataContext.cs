@@ -11,11 +11,16 @@ namespace DocumentMicroservice.Infrastructure {
 
 
         public DocDataContext(DbContextOptions options) : base(options) {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
+            /*Database.EnsureDeleted();
+            Database.EnsureCreated();*/
         }
 
+        // TODO: implement OnConfiguring
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
+        }
+
+        // TODO: implement OnModelCreating
+        protected override void OnModelCreating(ModelBuilder modelBuilder) {
         }
     }
 }
